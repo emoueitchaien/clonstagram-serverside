@@ -20,6 +20,9 @@
     "nodemon": "^2.0.4"
   },
   "devDependencies": {},
+  "engines": {
+    "node": "10.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emoueitchaien/clonstagram-serverside.git"
