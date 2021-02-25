@@ -4,10 +4,10 @@ const mongoose = require('mongoose')
 const requireLogin = require('../middlewares/requireLogin')
 const Post = mongoose.model('Post')
 
-router.post('/createpost',requireLogin,(req,res)=>{
-    const {title,body} = req.body
-    if(!title||!body){
-        res.status(422).json({error:"Please fill all details!"})
+router.post('/createpost', requireLogin, (req,res)=>{
+    const {caption,photo} = req.body
+    if(!caption||!photo){
+        res.status(422).json({error:"Please fill all details!!"})
     }
     
    // console.log(req.user)
@@ -15,8 +15,9 @@ router.post('/createpost',requireLogin,(req,res)=>{
     //res.send("Done")
 
     const post = new Post({
-        title,
-        body,
+        // title,
+        caption,
+        photo,
         postedBy : req.user
     })
 
