@@ -8,7 +8,7 @@ const { jwtSecret } = require("../key");
 const requireLogin = require("../middlewares/requireLogin");
 
 router.get("/", (req, res) => {
-  res.send("Hello there");
+  res.send("Hello there from github");
 });
 
 router.get("/protected", requireLogin, (req, res) => {
